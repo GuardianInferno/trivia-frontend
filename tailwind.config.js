@@ -11,6 +11,7 @@ module.exports = {
       },
       colors:{
         'primary':'#56baf0',
+        'homeButton':'#007386'
       }
     },
   },

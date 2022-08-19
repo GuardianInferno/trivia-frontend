@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar"
 
 const Signup = () => {
     return(
-        <div>
+        <div className="h-screen">
             <Navbar />
             Signup
         </div>

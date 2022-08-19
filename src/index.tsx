@@ -9,6 +9,8 @@ import './index.css';
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Home from './Pages/Home';
+import CreateHome from './Pages/Create/CreateHome';
+import Explore from './Pages/Explore';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -21,6 +23,8 @@ root.render(
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
+          <Route path='/create' element={<CreateHome />} />
+          <Route path='/explore' element={<Explore />} />
         </Routes>
         
       </BrowserRouter>  

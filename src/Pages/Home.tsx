@@ -1,7 +1,7 @@
 import Navbar from "../Navbar/Navbar"
 import React, {useState, useEffect} from "react"
 import {AnimatePresence, motion} from 'framer-motion'
-
+import { Link } from "react-router-dom"
 
 const Home = () =>{
     const [intro, setIntro] = useState(true)
@@ -90,25 +90,25 @@ const Home = () =>{
                         <div className="flex justify-center w-full items-center text-xl">
                             {everything &&(
                                 <> 
-                                    <motion.div 
-                                    className=" px-4 py-6 mx-4 w-32 h-32  flex justify-center items-center text-primary uppercase font-semibold rounded-full cursor-pointer" style={{backgroundColor:'#007386'}}
-                                    initial={{opacity:0, y:300, }}
+                                    <Link to='/create'><motion.div 
+                                    className=" px-4 py-6 mx-4 w-28 h-28 shadow-md  flex justify-center items-center text-primary uppercase font-semibold rounded-full cursor-pointer bg-homeButton" 
+                                    initial={{opacity:0, y:300}}
                                     animate={{opacity:1, y:0}}
                                     transition={{duration:1}}
-                                    whileHover={{scale:1.1, transition:{duration:1}}}
+                                    whileHover={{scale:1.1, transition:{duration:1}, backgroundColor:'#4dd0e1', color:'#ffcc80'}}
                                     >
                                         Create
-                                    </motion.div>
+                                    </motion.div></Link>
 
-                                    <motion.div 
-                                    className=" px-4 py-6 mx-4 w-32 h-32 mb-24 flex justify-center items-center text-primary uppercase font-semibold rounded-full cursor-pointer" style={{backgroundColor:'#007386'}}
+                                    <Link to='/explore'><motion.div 
+                                    className=" px-4 py-6 mx-4 w-32 h-32 mb-24 flex justify-center shadow-inner items-center text-primary uppercase font-semibold rounded-full cursor-pointer bg-homeButton"
                                     initial={{opacity:0, y:-300}}
                                     animate={{opacity:1, y:0}}
                                     transition={{duration:1}}
-                                    whileHover={{scale:1.1, transition:{duration:1}}}
+                                    whileHover={{scale:1.1, transition:{duration:1},backgroundColor:'#4dd0e1', color:'#ffcc80'}}
                                     >
                                         Explore
-                                    </motion.div>
+                                    </motion.div></Link>
 
                                 </>
                             )}

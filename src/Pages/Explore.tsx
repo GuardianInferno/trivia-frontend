@@ -1,14 +1,14 @@
 import React from "react"
 import Navbar from "../Navbar/Navbar"
 
-const Login = () => {
+const Explore = () => {
     return(
         <div className="h-screen">
             <Navbar />
-            Login
+            Explore
         </div>
     )
 }
 
 
-export default Login
+export default Explore
