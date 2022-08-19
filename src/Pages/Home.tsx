@@ -74,38 +74,48 @@ const Home = () =>{
                                 animate={{opacity:1}}
                                 transition={{duration:2}}
                                 exit={{x:-173}}>
-                                    QuizApp
+                                    Name
                             </motion.div>
                         )}
                         {end &&(
                             <motion.div
                              className="text-9xl flex items-center text-orange-300 pb-40 pl-12"
                              animate={{
-                                color:['#ffb74d', '#43b3d9']
+                                color:['#ffb74d', '#56baf0']
                              }}
                              transition={{duration:1}}>
-                                QuizApp
+                                Name
                             </motion.div>
                         )}
+                        <div className="flex justify-center w-full items-center text-xl">
+                            {everything &&(
+                                <> 
+                                    <motion.div 
+                                    className=" px-4 py-6 mx-4 w-32 h-32  flex justify-center items-center text-primary uppercase font-semibold rounded-full cursor-pointer" style={{backgroundColor:'#007386'}}
+                                    initial={{opacity:0, y:300, }}
+                                    animate={{opacity:1, y:0}}
+                                    transition={{duration:1}}
+                                    whileHover={{scale:1.1, transition:{duration:1}}}
+                                    >
+                                        Create
+                                    </motion.div>
+
+                                    <motion.div 
+                                    className=" px-4 py-6 mx-4 w-32 h-32 mb-24 flex justify-center items-center text-primary uppercase font-semibold rounded-full cursor-pointer" style={{backgroundColor:'#007386'}}
+                                    initial={{opacity:0, y:-300}}
+                                    animate={{opacity:1, y:0}}
+                                    transition={{duration:1}}
+                                    whileHover={{scale:1.1, transition:{duration:1}}}
+                                    >
+                                        Explore
+                                    </motion.div>
+
+                                </>
+                            )}
+                </div>
 
                     </AnimatePresence>
                 </div>
-                <div className="">
-                    {everything &&(
-                            <motion.div>
-                                Get started
-                            </motion.div>
-                    )}
-                </div>
-
-
-
-
-
-
-            
-
-            
         </div>
     )
 

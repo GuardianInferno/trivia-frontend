@@ -9,6 +9,9 @@ module.exports = {
       height:{
         '7/100':'7%',
       },
+      colors:{
+        'primary':'#56baf0',
+      }
     },
   },
   plugins: [],
